@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Career Mentor Prototype</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="app">
+
+  <!-- Page 1 - Logo Screen -->
+  <div class="page active" id="page-logo">
+    <img id="logo-img" src="assets/career-app-logo.jpg" alt="App Logo" />
+    <button id="start-btn" class="btn">Start</button>
+  </div>
+
+  <!-- Page 3 - User Type Selection -->
+  <div class="page" id="page-user-type">
+    <h1 id="user-type-title">Who are you?</h1>
+    <div class="user-type-cards">
+      <div class="user-card" data-type="student">
+        <img class="user-card-icon" src="assets/student.jpg" alt="Student Icon" />
+        <div class="user-card-text">Student</div>
+      </div>
+      <div class="user-card" data-type="graduate">
+        <img class="user-card-icon" src="assets/graduate.jpg" alt="Graduate Icon" />
+        <div class="user-card-text">Graduate</div>
+      </div>
+      <div class="user-card" data-type="jobseeker">
+        <img class="user-card-icon" src="assets/job-seeker.jpg" alt="Job Seeker Icon" />
+        <div class="user-card-text">Job Seeker</div>
+      </div>
+      <div class="user-card" data-type="professional">
+        <img class="user-card-icon" src="assets/professional.jpg" alt="Professional Icon" />
+        <div class="user-card-text">Professional</div>
+      </div>
+      <div class="user-card" data-type="other">
+        <img class="user-card-icon" src="assets/profile.jpg" alt="Other Icon" />
+        <div class="user-card-text">Other</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page 4 - Questionnaire Pages -->
+  <div class="page" id="page-questionnaire">
+    <div id="questionnaire-content" class="questionnaire"></div>
+    <div class="submit-btn-container">
+      <button id="submit-answers" class="btn submit-btn">Submit Answers</button>
+    </div>
+  </div>
+
+  <!-- Page 5 - Results & Support -->
+  <div class="page" id="page-results">
+    <div id="motivational">Every journey starts with a step forward</div>
+    <div id="results-cards"></div>
+    <button id="save-plan-btn" class="btn">Save My Plan</button>
+    <div id="bottom-buttons">
+      <button id="open-ai-chat" class="btn small">Chat with AI</button>
+      <button id="open-schedule" class="btn small">Schedule</button>
+    </div>
+  </div>
+
+  <!-- Page 6 - AI Chat Page -->
+  <div class="page" id="page-ai-chat">
+    <h2>AI Chat</h2>
+    <div id="chat-window"></div>
+    <div id="chat-input-container">
+      <input id="chat-input" type="text" placeholder="Type your question..." />
+      <button id="send-chat" class="btn">Send</button>
+      <button id="back-from-chat" class="btn small secondary">Back</button>
+    </div>
+  </div>
+
+  <!-- Page 7 - Schedule Page -->
+  <div class="page" id="page-schedule">
+    <h2>Your Schedule</h2>
+    <div id="schedule-list">
+      <p>(No scheduled events yet)</p>
+    </div>
+    <div id="schedule-controls">
+      <input id="event-input" type="text" placeholder="Add new event" />
+      <button id="add-event" class="btn">Add</button>
+      <button id="back-from-schedule" class="btn small secondary">Back</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

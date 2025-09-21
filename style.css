@@ -1,0 +1,339 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #d0e6f3, #d9efeb);
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+#app {
+  background: white;
+  width: 360px;
+  max-width: 95vw;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
+/* Common button style */
+.btn {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: 700;
+  border-radius: 32px;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(74,144,226,0.6);
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #3577c0;
+}
+
+/* Centered container for pages */
+.page {
+  padding: 20px 24px 32px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  min-height: 480px;
+}
+.page.active {
+  display: flex !important;
+}
+h1 {
+  font-weight: 700;
+  margin-bottom: 24px;
+  user-select: none;
+}
+p {
+  margin: 0 0 16px;
+}
+/* Logo Screen */
+#page-logo {
+  background: linear-gradient(to bottom, #89b5d4, #d9efeb);
+  color: #222;
+  gap: 40px;
+  justify-content: space-between;
+}
+#logo-img {
+  width: 120px;
+  user-select: none;
+}
+#start-btn {
+  width: 100%;
+  max-width: 280px;
+}
+
+/* User Type Selection */
+#page-user-type {
+  width: 100%;
+}
+#user-type-title {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+.user-type-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.user-card {
+  background: white;
+  width: 160px;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.07);
+  cursor: pointer;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.user-card:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.user-card-icon {
+  height: 36px;
+  width: 36px;
+}
+.user-card-text {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+/* Questionnaire Pages */
+.questionnaire {
+  width: 100%;
+  flex-direction: column;
+}
+.questionnaire h2 {
+  font-weight: 700;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  user-select: none;
+}
+.q-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  padding: 14px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.q-label {
+  font-weight: 600;
+  font-size: 1em;
+  margin-bottom: 6px;
+  user-select: none;
+}
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.option-btn {
+  background: #7ed6df;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.9em;
+  font-weight: 600;
+  cursor: pointer;
+  color: #074048;
+  user-select: none;
+  box-shadow: 0 2px 4px rgba(126,214,223,0.5);
+  border: 2px solid transparent;
+}
+.option-btn.selected {
+  background: #4a90e2;
+  color: white;
+  border-color: #3577c0;
+  box-shadow: 0 4px 7px rgba(52,103,170,0.8);
+}
+.other-input {
+  border: 2px solid #d9d9d9;
+  border-radius: 12px;
+  padding: 6px 12px;
+  font-size: 0.9em;
+  width: 100%;
+}
+textarea.notes-input {
+  border: 2px solid #d9d9d9;
+  border-radius: 16px;
+  font-size: 0.95em;
+  min-height: 80px;
+  padding: 10px 12px;
+  resize: vertical;
+}
+.submit-btn-container {
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+button.submit-btn {
+  width: 160px;
+}
+
+/* Results & Support Page */
+#page-results {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background: white;
+  border-radius: 16px;
+  padding: 20px 20px 80px; /* for bottom buttons */
+  max-height: 520px;
+  scrollbar-width: thin;
+  scrollbar-color: #7ED6DF #f0f0f0;
+}
+#page-results::-webkit-scrollbar {
+  width: 8px;
+}
+#page-results::-webkit-scrollbar-thumb {
+  background: #7ED6DF;
+  border-radius: 8px;
+}
+#page-results::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+#motivational {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 10px 0;
+  z-index: 10;
+  border-bottom: 1px solid #ddd;
+  font-weight: 700;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  text-align: center;
+  user-select: none;
+}
+.card-priority {
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+.priority-high {
+  background-color: #4a90e2;
+  color: white;
+}
+.priority-medium {
+  background-color: #7ed6df;
+  color: #07323a;
+}
+.priority-low {
+  background-color: #e0e0e0;
+  color: #333;
+}
+.support-icons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.support-icon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.95em;
+  cursor: default;
+  user-select: none;
+}
+.support-icon img {
+  height: 20px;
+  width: 20px;
+}
+#save-plan-btn {
+  position: sticky;
+  bottom: 60px;
+  max-width: 180px;
+  margin: 0 auto;
+  align-self: center;
+  z-index: 10;
+}
+#bottom-buttons {
+  position: sticky;
+  bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  z-index: 10;
+}
+.btn.small {
+  padding: 8px 14px;
+  font-size: 0.9em;
+  border-radius: 20px;
+}
+.btn.secondary {
+  background-color: gray;
+}
+
+/* AI Chat and Schedule Page styles */
+#page-ai-chat, #page-schedule {
+  padding: 20px 24px 32px;
+  display: none;
+  flex-direction: column;
+  min-height: 480px;
+}
+#chat-window {
+  border: 1px solid #ddd;
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  border-radius: 12px;
+  background: #f9f9f9;
+  margin-bottom: 12px;
+  font-size: 0.95em;
+  white-space: pre-wrap;
+}
+#chat-input-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+#chat-input {
+  flex-grow: 1;
+  padding: 8px 12px;
+  font-size: 1em;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+}
+#schedule-list {
+  flex-grow: 1;
+  margin-bottom: 12px;
+  overflow-y: auto;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 0.95em;
+}
+#schedule-controls {
+  display: flex;
+  gap: 8px;
+}
+#event-input {
+  flex-grow: 1;
+  padding: 8px 12px;
+  font-size: 1em;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+}
